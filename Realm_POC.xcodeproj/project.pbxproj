@@ -16,6 +16,8 @@
 		4E1256E3214C130F003D0EBF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1256E2214C130F003D0EBF /* main.m */; };
 		4E1256ED214C130F003D0EBF /* Realm_POCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1256EC214C130F003D0EBF /* Realm_POCTests.m */; };
 		4E1256F8214C130F003D0EBF /* Realm_POCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1256F7214C130F003D0EBF /* Realm_POCUITests.m */; };
+		4E125708214C26A0003D0EBF /* InfoTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E125707214C26A0003D0EBF /* InfoTable.m */; };
+		4E12570A214C26AF003D0EBF /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E125709214C26AF003D0EBF /* libc++.1.tbd */; };
 		97CCD12CCCC1638AF87A4D82 /* libPods-Realm_POCUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0B3B8B7E24520A7AE03EFE /* libPods-Realm_POCUITests.a */; };
 		D939EF8D84E72299BE25C9E0 /* libPods-Realm_POCTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D865FA540D0F5E86C4DE5D4F /* libPods-Realm_POCTests.a */; };
 		EDCC44ECC20A3E119EC0AC04 /* libPods-Realm_POC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33841DDFF34F49EFF5FE7EAA /* libPods-Realm_POC.a */; };
@@ -60,6 +62,9 @@
 		4E1256F3214C130F003D0EBF /* Realm_POCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Realm_POCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E1256F7214C130F003D0EBF /* Realm_POCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Realm_POCUITests.m; sourceTree = "<group>"; };
 		4E1256F9214C130F003D0EBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E125706214C26A0003D0EBF /* InfoTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfoTable.h; sourceTree = "<group>"; };
+		4E125707214C26A0003D0EBF /* InfoTable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfoTable.m; sourceTree = "<group>"; };
+		4E125709214C26AF003D0EBF /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
 		8450B03711618BDAA07EE80F /* Pods-Realm_POC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Realm_POC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Realm_POC/Pods-Realm_POC.debug.xcconfig"; sourceTree = "<group>"; };
 		8A0B3B8B7E24520A7AE03EFE /* libPods-Realm_POCUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Realm_POCUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D865FA540D0F5E86C4DE5D4F /* libPods-Realm_POCTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Realm_POCTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E12570A214C26AF003D0EBF /* libc++.1.tbd in Frameworks */,
 				EDCC44ECC20A3E119EC0AC04 /* libPods-Realm_POC.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,6 +104,7 @@
 		2DC50C47ED4D6AA62D55BFD3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4E125709214C26AF003D0EBF /* libc++.1.tbd */,
 				33841DDFF34F49EFF5FE7EAA /* libPods-Realm_POC.a */,
 				D865FA540D0F5E86C4DE5D4F /* libPods-Realm_POCTests.a */,
 				8A0B3B8B7E24520A7AE03EFE /* libPods-Realm_POCUITests.a */,
@@ -109,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				4E1256CF214C130E003D0EBF /* Realm_POC */,
+				4E125705214C263D003D0EBF /* Assets */,
 				4E1256EB214C130F003D0EBF /* Realm_POCTests */,
 				4E1256F6214C130F003D0EBF /* Realm_POCUITests */,
 				4E1256CE214C130E003D0EBF /* Products */,
@@ -134,12 +142,10 @@
 				4E1256D1214C130E003D0EBF /* AppDelegate.m */,
 				4E1256D3214C130E003D0EBF /* ViewController.h */,
 				4E1256D4214C130E003D0EBF /* ViewController.m */,
-				4E1256D6214C130E003D0EBF /* Main.storyboard */,
-				4E1256DC214C130F003D0EBF /* Assets.xcassets */,
-				4E1256DE214C130F003D0EBF /* LaunchScreen.storyboard */,
 				4E1256E1214C130F003D0EBF /* Info.plist */,
 				4E1256E2214C130F003D0EBF /* main.m */,
-				4E1256D9214C130E003D0EBF /* Realm_POC.xcdatamodeld */,
+				4E125706214C26A0003D0EBF /* InfoTable.h */,
+				4E125707214C26A0003D0EBF /* InfoTable.m */,
 			);
 			path = Realm_POC;
 			sourceTree = "<group>";
@@ -160,6 +166,17 @@
 				4E1256F9214C130F003D0EBF /* Info.plist */,
 			);
 			path = Realm_POCUITests;
+			sourceTree = "<group>";
+		};
+		4E125705214C263D003D0EBF /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				4E1256DC214C130F003D0EBF /* Assets.xcassets */,
+				4E1256D6214C130E003D0EBF /* Main.storyboard */,
+				4E1256DE214C130F003D0EBF /* LaunchScreen.storyboard */,
+				4E1256D9214C130E003D0EBF /* Realm_POC.xcdatamodeld */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		87FB22913AB53DFFA604F207 /* Pods */ = {
@@ -309,15 +326,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Realm_POCUITests-checkManifestLockResult.txt",
 			);
@@ -331,15 +344,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Realm_POC-checkManifestLockResult.txt",
 			);
@@ -353,15 +362,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Realm_POCTests-checkManifestLockResult.txt",
 			);
@@ -377,6 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E125708214C26A0003D0EBF /* InfoTable.m in Sources */,
 				4E1256D5214C130E003D0EBF /* ViewController.m in Sources */,
 				4E1256D2214C130E003D0EBF /* AppDelegate.m in Sources */,
 				4E1256E3214C130F003D0EBF /* main.m in Sources */,

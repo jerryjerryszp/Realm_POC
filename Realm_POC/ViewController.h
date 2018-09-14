@@ -7,9 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "InfoTable.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController {
+    RLMResults *tableDataArray;
+    InfoTable *selectedDataObject;
+}
+
+- (IBAction)didTapInsertBtn:(id)sender;
+- (IBAction)didTapDeleteBtn:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UITableView *mTableView;
 
 
 @end
+
+
+
 

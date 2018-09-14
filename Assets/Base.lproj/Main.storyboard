@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wlU-cC-TRi">
+                                <rect key="frame" x="16" y="20" width="40" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="Fa7-LO-6zh"/>
+                                    <constraint firstAttribute="height" constant="30" id="elF-UO-ilb"/>
+                                </constraints>
+                                <state key="normal" title="Insert"/>
+                                <connections>
+                                    <action selector="didTapInsertBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KAC-XD-O6X"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Isr-LA-ypE">
+                                <rect key="frame" x="314" y="20" width="45" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="Cxf-vj-oCe"/>
+                                    <constraint firstAttribute="height" constant="30" id="uzr-ha-Vxm"/>
+                                </constraints>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="didTapDeleteBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cGj-PH-mZN"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="au1-D6-gQr">
+                                <rect key="frame" x="0.0" y="58" width="375" height="609"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ZVu-Pw-a6b"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="0Xd-LH-i6N"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="au1-D6-gQr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Itr-vf-ebu"/>
+                            <constraint firstItem="au1-D6-gQr" firstAttribute="top" secondItem="wlU-cC-TRi" secondAttribute="bottom" constant="8" id="M5N-Zr-Ec0"/>
+                            <constraint firstItem="wlU-cC-TRi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="OHR-48-Rq0"/>
+                            <constraint firstItem="au1-D6-gQr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="jlE-gM-fDZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Isr-LA-ypE" secondAttribute="trailing" constant="16" id="l0K-o7-4gt"/>
+                            <constraint firstItem="Isr-LA-ypE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pgg-uv-UZ3"/>
+                            <constraint firstItem="wlU-cC-TRi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rgr-tA-c5m"/>
+                            <constraint firstItem="au1-D6-gQr" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="x8q-36-BFa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mTableView" destination="au1-D6-gQr" id="wL9-mg-UhL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>
