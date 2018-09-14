@@ -62,6 +62,12 @@
             [self updateDataInDatabase:titleTextField.text WithTask:taskTextField.text];
         }
     }
+    
+    if (alertView.tag == 333) {
+        if (buttonIndex == 1) {
+            [self deleteAll];
+        }
+    }
 }
 
 - (void)insertDataIntoDataBaseWithTitle:(NSString *)title WithTask:(NSString *)task {
@@ -151,6 +157,13 @@
 }
 
 - (IBAction)didTapDeleteAllBtn:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Alert" message:@"Are you sure to delete all?" delegate:self cancelButtonTitle:nil otherButtonTitles:@"Cancel" ,@"Delete", nil];
+    alert.alertViewStyle = UIAlertViewStyleDefault;
+    alert.tag = 333;
+    [alert show];
+}
+
+- (void)deleteAll {
     //delete all objects in the Realm database
     [[RLMRealm defaultRealm] beginWriteTransaction];
     [[RLMRealm defaultRealm] deleteAllObjects];
