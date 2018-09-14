@@ -1,0 +1,7 @@
+# Xcode
+# 
+
+#CocoaPods
+VICE.xcworkspace
+Podfile.lock
+Pods/
