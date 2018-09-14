@@ -20,10 +20,16 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    //define local migrations
     RLMRealmConfiguration *config = [RLMRealmConfiguration defaultConfiguration];
     
+    //set the new schema version
+    //this must be greater than the previously used version
+    //init version = 0
     config.schemaVersion = 1;
     
+    //set the block which will be called when opening a Realm
+    //with a lower schema version than the one set above
     config.migrationBlock = ^(RLMMigration *migration, uint64_t oldSchemaVersion) {
         if (oldSchemaVersion < 1) {
           
@@ -38,7 +44,11 @@
         }
     };
     
+    //tell realm to use the new config
+    [RLMRealmConfiguration setDefaultConfiguration:config];
     
+    //perform migration
+    [RLMRealm defaultRealm];
     
     return YES;
 }
