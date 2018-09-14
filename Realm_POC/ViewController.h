@@ -10,16 +10,20 @@
 #import "InfoTable.h"
 
 @interface ViewController : UIViewController {
+    //auto updating query container for data objects
+    //RLMResults always reflect on current state in current thread
     RLMResults *tableDataArray;
+    //selected data object for editing purpose
     InfoTable *selectedDataObject;
 }
 
+//three buttons: insert/delete/deleteAll on top of vc
 - (IBAction)didTapInsertBtn:(id)sender;
 - (IBAction)didTapDeleteBtn:(id)sender;
 - (IBAction)didTapDeleteAllBtn:(id)sender;
 
+//tableView for populating objects
 @property (weak, nonatomic) IBOutlet UITableView *mTableView;
-
 
 @end
 

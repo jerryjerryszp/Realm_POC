@@ -12,6 +12,7 @@
 
 @interface InfoTable : RLMObject
 
+//Add two columns to the Realm Database
 @property NSString *title;
 @property NSString *task;
 
