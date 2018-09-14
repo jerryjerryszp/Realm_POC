@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <Realm/Realm.h>
+#import "InfoTable.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,27 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    RLMRealmConfiguration *config = [RLMRealmConfiguration defaultConfiguration];
+    
+    config.schemaVersion = 1;
+    
+    config.migrationBlock = ^(RLMMigration *migration, uint64_t oldSchemaVersion) {
+        if (oldSchemaVersion < 1) {
+          
+//***add or drop objects
+//            // combine name fields into a single field
+//            newObject[@"fullName"] = [NSString stringWithFormat:@"%@ %@",
+//                                      oldObject[@"firstName"],
+//                                      oldObject[@"lastName"]];
+    
+//***renaming objects
+//            [migration renamePropertyForClass:InfoTable.className oldName:@"task" newName:@"tasks"];
+        }
+    };
+    
+    
+    
     return YES;
 }
 
