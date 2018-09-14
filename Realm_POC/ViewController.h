@@ -16,6 +16,7 @@
 
 - (IBAction)didTapInsertBtn:(id)sender;
 - (IBAction)didTapDeleteBtn:(id)sender;
+- (IBAction)didTapDeleteAllBtn:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UITableView *mTableView;
 

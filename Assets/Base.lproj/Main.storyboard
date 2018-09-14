@@ -18,19 +18,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Isr-LA-ypE">
-                                <rect key="frame" x="209" y="51" width="150" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wlU-cC-TRi">
+                                <rect key="frame" x="16" y="51" width="130" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="bRQ-kt-8cS"/>
-                                    <constraint firstAttribute="height" constant="30" id="hJ6-iL-er5"/>
+                                    <constraint firstAttribute="width" constant="130" id="UUI-42-VTk"/>
+                                    <constraint firstAttribute="height" constant="30" id="Uim-pl-KKd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Delete">
+                                <state key="normal" title="Insert">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapInsertBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KAC-XD-O6X"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Isr-LA-ypE">
+                                <rect key="frame" x="209" y="51" width="50" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="OlT-3e-uu0"/>
+                                    <constraint firstAttribute="height" constant="30" id="erZ-rL-rCP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Edit">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="didTapDeleteBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cGj-PH-mZN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bx3-wz-y5Y">
+                                <rect key="frame" x="267" y="51" width="92" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="92" id="LcM-0G-Sex"/>
+                                    <constraint firstAttribute="height" constant="30" id="NUi-pX-PxZ"/>
+                                </constraints>
+                                <state key="normal" title="Delete All">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapDeleteAllBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q3k-yL-oHc"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="77" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="au1-D6-gQr">
@@ -41,32 +70,19 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="0Xd-LH-i6N"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wlU-cC-TRi">
-                                <rect key="frame" x="16" y="51" width="150" height="30"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="1Nz-w3-Kyu"/>
-                                    <constraint firstAttribute="width" constant="150" id="PZG-7n-bQy"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Insert">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTapInsertBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KAC-XD-O6X"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="au1-D6-gQr" firstAttribute="top" secondItem="wlU-cC-TRi" secondAttribute="bottom" constant="8" id="1cz-XZ-keZ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Isr-LA-ypE" secondAttribute="trailing" constant="16" id="8uN-xS-N2W"/>
-                            <constraint firstItem="Isr-LA-ypE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="31" id="Fid-rA-vln"/>
-                            <constraint firstItem="wlU-cC-TRi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="31" id="TS0-kP-RxT"/>
-                            <constraint firstItem="wlU-cC-TRi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="XEe-ae-1gq"/>
-                            <constraint firstItem="au1-D6-gQr" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="bwv-GZ-RPM"/>
-                            <constraint firstItem="au1-D6-gQr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kBi-yp-cGt"/>
-                            <constraint firstItem="au1-D6-gQr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="p0m-gU-NeO"/>
+                            <constraint firstItem="au1-D6-gQr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FkS-ch-RC5"/>
+                            <constraint firstItem="au1-D6-gQr" firstAttribute="top" secondItem="wlU-cC-TRi" secondAttribute="bottom" constant="8" id="MyS-Ng-AhM"/>
+                            <constraint firstItem="wlU-cC-TRi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="P7V-UV-ufr"/>
+                            <constraint firstItem="au1-D6-gQr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Qnp-9B-f0C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bx3-wz-y5Y" secondAttribute="trailing" constant="16" id="pov-9Y-W8q"/>
+                            <constraint firstItem="au1-D6-gQr" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="t3a-3t-CoC"/>
+                            <constraint firstItem="wlU-cC-TRi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="31" id="tRr-0L-Nmk"/>
+                            <constraint firstItem="Bx3-wz-y5Y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="31" id="xBN-U4-gPB"/>
+                            <constraint firstItem="Isr-LA-ypE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="31" id="xji-Sa-NvE"/>
+                            <constraint firstItem="Bx3-wz-y5Y" firstAttribute="leading" secondItem="Isr-LA-ypE" secondAttribute="trailing" constant="8" id="xpE-RT-Flg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

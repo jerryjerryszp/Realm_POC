@@ -10,6 +10,8 @@
 
 @interface ViewController ()
 
+@property (nonatomic, assign) BOOL toggle;
+
 @end
 
 @implementation ViewController
@@ -18,6 +20,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.]
     tableDataArray = [InfoTable allObjects];
+    self.toggle = false;
     [_mTableView reloadData];
     
 }
@@ -129,7 +132,23 @@
 
 
 - (IBAction)didTapDeleteBtn:(id)sender {
-    [_mTableView setEditing:YES animated:YES];
+    
+    if(_toggle == false) {
+        [_mTableView setEditing:YES animated:YES];
+    }
+    
+    if(_toggle == true) {
+        [_mTableView setEditing:NO animated:YES];
+    }
+    self.toggle = !_toggle;
+}
+
+- (IBAction)didTapDeleteAllBtn:(id)sender {
+    [[RLMRealm defaultRealm] beginWriteTransaction];
+    [[RLMRealm defaultRealm] deleteAllObjects];
+    [[RLMRealm defaultRealm] commitWriteTransaction];
+    [_mTableView reloadData];
+    
 }
 @end
 
